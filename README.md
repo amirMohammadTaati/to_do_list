@@ -1,3 +1,3 @@
-# shopping_cart
+# to do list
 
-simple shopping cart programm with react.js
+simple to do list programm with react.js
