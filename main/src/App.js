@@ -8,15 +8,22 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-        name : "Amir",
+        value : '',
     }
   }
+
+  handleChange = event => {
+    this.setState({
+      value : event.target.value,
+    });
+  }
   render(){
+    console.log(this.state.value);
     return(
       <div className = "header">
         <Header />
         <hr />
-        <Search />
+        <Search event={this.handleChange}/>
 
       </div>
     )
