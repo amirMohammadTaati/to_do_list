@@ -30,4 +30,19 @@ class App extends React.Component{
     
 }
 
+const Job = props => {
+    return(
+    <div class="card">
+      <h1>{props.info[0]}</h1>
+      <button 
+      id={props.info[0]}
+      onClick={props.done}
+      >
+        Done
+      </button>
+    </div>
+    );
+  }
+  
+
 export default App
