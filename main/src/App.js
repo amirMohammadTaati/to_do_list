@@ -1,32 +1,14 @@
-import React from 'react';
-import Header from './components/Header'
-import Search from './components/Search'
-
+import React from 'react'
 
 class App extends React.Component{
-
-  constructor(props){
-    super(props);
-    this.state = {
-        value : '',
-    }
-  }
-
-  handleChange = event => {
-    this.setState({
-      value : event.target.value,
-    });
-  }
-  render(){
-    console.log(this.state.value);
-    return(
-      <div className = "header">
-        <Header />
-        <hr />
-        <Search event={this.handleChange}/>
-
-      </div>
-    )
-  }
+    constructor(props){
+        super(props);
+        this.state = {}
+        this.input = React.createRef();
+        this.handleClick = this.handleClick.bind(this);
+        this.done        = this.done.bind(this);
+      }
+    
 }
+
 export default App
