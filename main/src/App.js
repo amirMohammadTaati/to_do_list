@@ -10,6 +10,13 @@ class App extends React.Component{
     }
 
     render(){
+        let cards = [];
+        for(let item of Object.entries(this.state)){
+          if(item[1] != undefined){
+            let info_arr = [item[0],item[1][0]];
+            cards.push(<Job key={item[1][1]} info={info_arr} done={this.done}/>);
+          }
+        }
         return(
             <div className="container">
               <div className="input-section">
