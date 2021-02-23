@@ -9,6 +9,19 @@ class App extends React.Component{
         this.done        = this.done.bind(this);
     }
 
+    handleClick(){
+        const name = this.input.current.value
+        this.setState({
+          [name] : [false,Math.random()],
+        });
+      }
+    
+      done(event){
+        this.setState({
+          [event.target.id] : undefined,
+        })
+        //console.log(this.state[event.target.id]);
+      }
     render(){
         let cards = [];
         for(let item of Object.entries(this.state)){
